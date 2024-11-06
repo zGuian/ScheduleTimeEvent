@@ -1,4 +1,5 @@
 ﻿using ScheduleTime.Domain.Entities.Interfaces;
+using ScheduleTime.Domain.Entities.ServiceType;
 
 namespace ScheduleTime.Domain.Entities
 {

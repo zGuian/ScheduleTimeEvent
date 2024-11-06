@@ -1,5 +1,8 @@
-﻿namespace ScheduleTime.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ScheduleTime.Domain.Entities
 {
+    [Table("Customer")]
     public class Customer
     {
         public long Id { get; private set; }

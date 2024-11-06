@@ -1,9 +1,7 @@
-﻿namespace ScheduleTime.Domain.Entities
+﻿namespace ScheduleTime.Domain.Entities.ServiceType
 {
     public abstract class HairService
     {
-        public long Id { get; set; }
-        public Customer Customer { get; set; } = null!;
         public bool Painting { get; set; }
         public string? Color { get; set; }
         public bool AnotherService { get; set; }
