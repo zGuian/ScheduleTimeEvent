@@ -8,7 +8,7 @@ import java.time.LocalDate;
 @Setter(AccessLevel.PRIVATE)
 @NoArgsConstructor
 @AllArgsConstructor
-public class HairService {
+public class Hair {
     private boolean painting;
     private String color;
     private boolean anotherService;

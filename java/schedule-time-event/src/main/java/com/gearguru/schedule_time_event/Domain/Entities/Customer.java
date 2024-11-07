@@ -5,12 +5,19 @@ import lombok.*;
 @Getter(AccessLevel.PUBLIC)
 @Setter(AccessLevel.PRIVATE)
 @NoArgsConstructor
-@AllArgsConstructor
 public class Customer {
     private Long id;
-    private String firstName;
-    private String lastName;
-    private String fullName;
-    private String email;
-    private String phone;
+    private final String firstName;
+    private final String lastName;
+    private final String fullName;
+    private final String email;
+    private final String phone;
+
+    public Customer(String firstName, String lastName, String fullName, String email, String phone) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.fullName = fullName;
+        this.email = email;
+        this.phone = phone;
+    }
 }
