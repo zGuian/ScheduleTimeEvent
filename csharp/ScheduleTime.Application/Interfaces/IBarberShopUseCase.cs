@@ -5,6 +5,6 @@ namespace ScheduleTime.Application.Interfaces
 {
     public interface IBarberShopUseCase
     {
-        Task<BarberShop> ValidDataAndConvertDTOInEntity(BarberShopDTO dto);
+        BarberShop ValidDataAndConvertDTOInEntity(BarberShopDTO dto);
     }
 }

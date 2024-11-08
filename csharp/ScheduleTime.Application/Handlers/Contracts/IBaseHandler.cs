@@ -1,4 +1,4 @@
-﻿namespace ScheduleTime.Application.Handlers.Interfaces
+﻿namespace ScheduleTime.Application.Handlers.Contracts
 {
     public interface IBaseHandler<T> where T : class
     {

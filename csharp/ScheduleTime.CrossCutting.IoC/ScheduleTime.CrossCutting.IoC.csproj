@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ScheduleTime.Application\ScheduleTime.Application.csproj" />
     <ProjectReference Include="..\ScheduleTime.CrossCutting\ScheduleTime.CrossCutting.csproj" />
+    <ProjectReference Include="..\ScheduleTime.DataBase\ScheduleTime.DataBase.csproj" />
     <ProjectReference Include="..\ScheduleTime.Domain\ScheduleTime.Domain.csproj" />
   </ItemGroup>
 

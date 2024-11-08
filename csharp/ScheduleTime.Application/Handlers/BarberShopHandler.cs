@@ -1,4 +1,4 @@
-﻿using ScheduleTime.Application.Handlers.Interfaces;
+﻿using ScheduleTime.Application.Handlers.Contracts;
 using ScheduleTime.Application.Interfaces;
 using ScheduleTime.CrossCutting.DTOs.V1;
 

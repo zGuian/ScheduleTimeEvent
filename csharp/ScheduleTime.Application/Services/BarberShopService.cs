@@ -1,5 +1,5 @@
 ﻿using ScheduleTime.Application.Interfaces;
-using ScheduleTime.Application.Services.Interfaces;
+using ScheduleTime.Application.Services.Contracts;
 using ScheduleTime.Domain.Entities;
 
 namespace ScheduleTime.Application.Services

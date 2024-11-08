@@ -2,12 +2,13 @@
 using FluentValidation;
 using ScheduleTime.Application.Exceptions;
 using ScheduleTime.Application.Interfaces;
+using ScheduleTime.Application.UseCases.Contracts;
 using ScheduleTime.CrossCutting.DTOs.V1;
 using ScheduleTime.Domain.Entities;
 
 namespace ScheduleTime.Application.UseCases
 {
-    public class BeautySalonUseCase : IBeautySalonUseCase
+    public class BeautySalonUseCase : IBaseUseCase<BeautySalon, BeautySalonDTO>, IBeautySalonUseCase
     {
         private readonly IMapper _mapper;
         private readonly IValidator<BeautySalon> _validator;
