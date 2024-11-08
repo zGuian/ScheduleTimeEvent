@@ -24,6 +24,7 @@ namespace ScheduleTime.CrossCutting.DTOs.V1
             Hair = hair;
             Nail = nail;
             Lash = lash;
+            AnotherProcedure = anotherProcedure;
         }
     }
 }
