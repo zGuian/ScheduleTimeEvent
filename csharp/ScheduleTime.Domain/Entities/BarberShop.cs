@@ -1,24 +1,13 @@
-﻿using ScheduleTime.Domain.Entities.Interfaces;
-using ScheduleTime.Domain.Entities.ServiceType;
+﻿using ScheduleTime.Domain.Entities.ServiceType;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScheduleTime.Domain.Entities
 {
-    public class BarberShop : HairService, IBarberShopServices
+    [Table("barber_shop")]
+    public class BarberShop
     {
-        private BarberShop() { }
-
-        public BarberShop(Customer customer, DateTime date)
-        {
-        }
-
-        public void HaircutSchedule()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void BeardCuttingSchedule()
-        {
-            throw new NotImplementedException();
-        }
+        public long Id { get; private set; }
+        public AnotherProcedure? AnotherProcedure { get; private set; }
+        public Hair? Hair { get; private set; }
     }
 }

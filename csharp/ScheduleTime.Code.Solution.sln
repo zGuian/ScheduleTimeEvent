@@ -13,17 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Infrastructure", "4. Inf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleTime.Domain", "ScheduleTime.Domain\ScheduleTime.Domain.csproj", "{2BF7AB03-00A7-40E0-BC7C-DD94C5BA3473}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTime.Application", "ScheduleTime.Application\ScheduleTime.Application.csproj", "{A7AB5178-9F9F-45F7-8A74-40FBB03801F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleTime.Application", "ScheduleTime.Application\ScheduleTime.Application.csproj", "{A7AB5178-9F9F-45F7-8A74-40FBB03801F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTime.Presentation.WebAPI", "ScheduleTime.Presentation.WebAPI\ScheduleTime.Presentation.WebAPI.csproj", "{908EE9AF-70FC-431F-B1E8-6226601D3CCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleTime.Presentation.WebAPI", "ScheduleTime.Presentation.WebAPI\ScheduleTime.Presentation.WebAPI.csproj", "{908EE9AF-70FC-431F-B1E8-6226601D3CCF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 Infrastructure.Database", "4.1 Infrastructure.Database", "{03B7B0EA-0DCD-4328-96A3-384D8BDE0D3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 Infrastructure.CrossCutting", "4.2 Infrastructure.CrossCutting", "{8FFC2CFE-1D06-4CA3-BA97-F783474767DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTime.CrossCutting", "ScheduleTime.CrossCutting\ScheduleTime.CrossCutting.csproj", "{A86A4577-A750-4B65-A371-E89A909ECD32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleTime.CrossCutting", "ScheduleTime.CrossCutting\ScheduleTime.CrossCutting.csproj", "{A86A4577-A750-4B65-A371-E89A909ECD32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTime.CrossCutting.IoC", "ScheduleTime.CrossCutting.IoC\ScheduleTime.CrossCutting.IoC.csproj", "{7F676EF3-DE23-4CED-A6BB-67409C4EE207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScheduleTime.CrossCutting.IoC", "ScheduleTime.CrossCutting.IoC\ScheduleTime.CrossCutting.IoC.csproj", "{7F676EF3-DE23-4CED-A6BB-67409C4EE207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduleTime.DataBase", "ScheduleTime.DataBase\ScheduleTime.DataBase.csproj", "{CA1D7F01-9E7F-4E41-B4B1-85BA7742E7BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{7F676EF3-DE23-4CED-A6BB-67409C4EE207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F676EF3-DE23-4CED-A6BB-67409C4EE207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F676EF3-DE23-4CED-A6BB-67409C4EE207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA1D7F01-9E7F-4E41-B4B1-85BA7742E7BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1D7F01-9E7F-4E41-B4B1-85BA7742E7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1D7F01-9E7F-4E41-B4B1-85BA7742E7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1D7F01-9E7F-4E41-B4B1-85BA7742E7BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{8FFC2CFE-1D06-4CA3-BA97-F783474767DB} = {979D797C-B179-4A83-9733-7EC355AAE070}
 		{A86A4577-A750-4B65-A371-E89A909ECD32} = {8FFC2CFE-1D06-4CA3-BA97-F783474767DB}
 		{7F676EF3-DE23-4CED-A6BB-67409C4EE207} = {8FFC2CFE-1D06-4CA3-BA97-F783474767DB}
+		{CA1D7F01-9E7F-4E41-B4B1-85BA7742E7BA} = {03B7B0EA-0DCD-4328-96A3-384D8BDE0D3B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86590CDE-EA83-4643-9DF1-EB3FE01651EC}
