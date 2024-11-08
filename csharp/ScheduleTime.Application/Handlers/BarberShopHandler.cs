@@ -1,22 +1,28 @@
 ﻿using ScheduleTime.Application.Handlers.Interfaces;
-using ScheduleTime.Domain.Entities;
-using ScheduleTime.Domain.Factories.Interfaces;
+using ScheduleTime.Application.Interfaces;
+using ScheduleTime.CrossCutting.DTOs.V1;
 
 namespace ScheduleTime.Application.Handlers
 {
-    public class BarberShopHandler : IBarberShopHandler
+    public class BarberShopHandler : IBaseHandler<BarberShopDTO>, IBarberShopHandler
     {
-        private readonly IScheduleFactory _factory;
+        private readonly IBarberShopService _service;
+        private readonly IBarberShopUseCase _useCase;
 
-        public BarberShopHandler(IScheduleFactory factory)
+        public BarberShopHandler()
         {
-            _factory = factory;
+            if (_service == null) throw new ArgumentNullException(nameof(_service));
+            if (_useCase == null) throw new ArgumentNullException(nameof(_useCase));
+        }
+        public BarberShopHandler(IBarberShopService service, IBarberShopUseCase useCase)
+        {
+            _service = service;
+            _useCase = useCase;
         }
 
-        public Task ScheduleTime(Schedule schedule, Customer customer)
+        public Task ScheduleTime(BarberShopDTO barberShopDTO)
         {
-            var newSchedule = _factory.CreateSchedule(schedule.ScheduledTime, customer);
-
+            var barberShop = _useCase.ValidDataAndConvertDTOInEntity(barberShopDTO);
 
             throw new NotImplementedException();
         }

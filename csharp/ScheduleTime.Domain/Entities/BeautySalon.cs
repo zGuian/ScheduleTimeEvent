@@ -1,32 +1,36 @@
-﻿using ScheduleTime.Domain.Entities.Interfaces;
-using ScheduleTime.Domain.Entities.ServiceType;
+﻿using ScheduleTime.Domain.Entities.ServiceType;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScheduleTime.Domain.Entities
 {
-    public class BeautySalon : HairService, IBeautySalonServices
+    [Table("beauty_salon")]
+    public class BeautySalon
     {
         public long Id { get; private set; }
-        public NailService Nail { get; private set; } = null!;
-        public LashService Lash { get; private set; } = null!;
+        public Hair? Hair { get; private set; }
+        public Nail? Nail { get; private set; }
+        public Lash? Lash { get; private set; }
+        public AnotherProcedure? AnotherProcedure { get; private set; }
+        public Schedule Schedule { get; private set; } = null!;
 
-        public void HairTreatment()
+        private BeautySalon() { }
+
+        public BeautySalon(Schedule schedule, Hair? hair = null, Nail? nail = null, Lash? lash = null, AnotherProcedure? anotherProcedure = null)
         {
-            throw new NotImplementedException();
+            Hair = hair;
+            Nail = nail;
+            Lash = lash;
+            AnotherProcedure = anotherProcedure;
+            Schedule = schedule;
         }
 
-        public void PerformsChemistry()
+        public static class Factories
         {
-            throw new NotImplementedException();
-        }
-
-        public void PerformsLashDesign()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PerformsNailDesign()
-        {
-            throw new NotImplementedException();
+            public static BeautySalon CreateBeautySalon(Schedule schedule, Hair? hair = null, Nail? nail = null, 
+                Lash? lash = null, AnotherProcedure? anotherProcedure = null)
+            {
+                return new BeautySalon(schedule, hair, nail, lash, anotherProcedure);
+            }
         }
     }
 }

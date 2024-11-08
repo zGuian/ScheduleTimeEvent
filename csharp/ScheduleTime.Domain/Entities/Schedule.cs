@@ -1,23 +1,27 @@
-﻿using ScheduleTime.Domain.Entities.Enums;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ScheduleTime.Domain.Entities
 {
+    [Table("schedule")]
     public class Schedule
     {
+        public string IDTransaction { get; init; } = Guid.NewGuid().ToString();
         public long Id { get; private set; }
         public DateTime ScheduledTime { get; private set; }
-        public Customer Customer { get; private set; } = null!;
-        public BarberShop? BarberShop { get; private set; }
-        public BeautySalon? BeautySalon { get; private set; }
+        public DateTime CurrentDate { get; private set; }
 
-        private Schedule() { }
-
-        public Schedule(DateTime date, Customer customer, BarberShop? barberShop = null, BeautySalon? beautySalon = null)
+        public Schedule(DateTime scheduledTime, DateTime currentDate)
         {
-            ScheduledTime = date;
-            Customer = customer;
-            BarberShop = barberShop;
-            BeautySalon = beautySalon;
+            ValidateSchedule(scheduledTime, currentDate);
+        }
+
+        private void ValidateSchedule(DateTime scheduleTime, DateTime currentTime)
+        {
+            if (scheduleTime <= currentTime)
+            {
+                ScheduledTime = scheduleTime;
+                CurrentDate = currentTime;
+            }
         }
     }
 }
