@@ -2,6 +2,6 @@
 {
     public interface IBaseService<T> where T : class
     {
-        
+ 
     }
 }

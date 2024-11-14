@@ -20,11 +20,11 @@ namespace ScheduleTime.Presentation.WebAPI.Controllers
             _beautySalonHandler = beautySalonHandler;
         }
 
-        public async Task<IActionResult> ScheduleTime([FromBody] BeautySalonDTO beautySalonDTO)
+        [HttpPost($"/{nameof(ScheduleTime)}")]
+        public async Task<IActionResult> ScheduleTime([FromBody] BeautySalonDTO beautySalonDto)
         {
-            await _beautySalonHandler.ScheduleTime(beautySalonDTO);
-
-            throw new NotImplementedException();
+            var view = await _beautySalonHandler.ScheduleTime(beautySalonDto);
+            return Ok(view);
         }
     }
 }

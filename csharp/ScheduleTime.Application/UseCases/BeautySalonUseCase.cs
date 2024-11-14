@@ -25,16 +25,16 @@ namespace ScheduleTime.Application.UseCases
             _validator = validator;
         }
 
-        public BeautySalon ValidDataAndConvertDTOInEntity(BeautySalonDTO beautySalonDTO)
+        public BeautySalon ValidDataAndConvertDTOInEntity(BeautySalonDTO beautySalonDto)
         {
-            var beautySalon = _mapper.Map<BeautySalon>(beautySalonDTO);
+            var beautySalon = _mapper.Map<BeautySalon>(beautySalonDto);
             var result = _validator.Validate(beautySalon);
-            if (!result.IsValid)
+            if (result.IsValid)
             {
-                var erros = result.Errors.Select(e => e.ErrorMessage).ToList();
-                throw new ValidationBusinessException(erros);
+                return beautySalon;
             }
-            return beautySalon;
+            var errors = result.Errors.Select(e => e.ErrorMessage).ToList();
+            throw new ValidationBusinessException(errors);
         }
     }
 }
